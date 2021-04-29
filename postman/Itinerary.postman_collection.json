@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "dc4f91ce-8a80-4b10-9e6e-aa22161b560f",
+		"name": "Itinerary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Itinerary",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"depertureDate\": \"2021-05-01\",\n    \"arrivalDate\": \"2021-05-02\",\n    \"sourceCity\": \"Mza\",\n    \"destinationCity\": \"L.A.\",\n    \"passengerName\": \"Mirta Legrand\",\n    \"passengerAge\": \"333\",\n    \"luggageRoom\": 0,\n    \"price\": \"1000\",\n    \"depertureTime\": \"10:00 am\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/itineraries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"itineraries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Itinerary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/itineraries/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"itineraries",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
